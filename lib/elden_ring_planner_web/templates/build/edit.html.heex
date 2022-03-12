@@ -1,0 +1,5 @@
+<h1>Edit Build</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.build_path(@conn, :update, @build)) %>
+
+<span><%= link "Back", to: Routes.build_path(@conn, :index) %></span>

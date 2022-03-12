@@ -1,0 +1,26 @@
+<h1>Listing Archetype</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for archetype <- @archetype do %>
+    <tr>
+      <td><%= archetype.name %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.archetype_path(@conn, :show, archetype) %></span>
+        <span><%= link "Edit", to: Routes.archetype_path(@conn, :edit, archetype) %></span>
+        <span><%= link "Delete", to: Routes.archetype_path(@conn, :delete, archetype), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Archetype", to: Routes.archetype_path(@conn, :new) %></span>

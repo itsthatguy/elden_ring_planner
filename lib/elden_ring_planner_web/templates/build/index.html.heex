@@ -1,0 +1,44 @@
+<h1>Listing Build</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Vigor</th>
+      <th>Mind</th>
+      <th>Endurance</th>
+      <th>Strength</th>
+      <th>Dexterity</th>
+      <th>Intelligence</th>
+      <th>Faith</th>
+      <th>Arcane</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for build <- @build do %>
+    <tr>
+      <td><%= build.name %></td>
+      <td><%= build.level %></td>
+      <td><%= build.vigor %></td>
+      <td><%= build.mind %></td>
+      <td><%= build.endurance %></td>
+      <td><%= build.strength %></td>
+      <td><%= build.dexterity %></td>
+      <td><%= build.intelligence %></td>
+      <td><%= build.faith %></td>
+      <td><%= build.arcane %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.build_path(@conn, :show, build) %></span>
+        <span><%= link "Edit", to: Routes.build_path(@conn, :edit, build) %></span>
+        <span><%= link "Delete", to: Routes.build_path(@conn, :delete, build), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Build", to: Routes.build_path(@conn, :new) %></span>

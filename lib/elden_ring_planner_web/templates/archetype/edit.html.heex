@@ -1,0 +1,5 @@
+<h1>Edit Archetype</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.archetype_path(@conn, :update, @archetype)) %>
+
+<span><%= link "Back", to: Routes.archetype_path(@conn, :index) %></span>

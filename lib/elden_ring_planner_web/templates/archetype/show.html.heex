@@ -1,0 +1,13 @@
+<h1>Show Archetype</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @archetype.name %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.archetype_path(@conn, :edit, @archetype) %></span> |
+<span><%= link "Back", to: Routes.archetype_path(@conn, :index) %></span>

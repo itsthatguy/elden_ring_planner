@@ -1,0 +1,58 @@
+<h1>Show Build</h1>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @build.name %>
+  </li>
+
+  <li>
+    <strong>Level:</strong>
+    <%= @build.level %>
+  </li>
+
+  <li>
+    <strong>Vigor:</strong>
+    <%= @build.vigor %>
+  </li>
+
+  <li>
+    <strong>Mind:</strong>
+    <%= @build.mind %>
+  </li>
+
+  <li>
+    <strong>Endurance:</strong>
+    <%= @build.endurance %>
+  </li>
+
+  <li>
+    <strong>Strength:</strong>
+    <%= @build.strength %>
+  </li>
+
+  <li>
+    <strong>Dexterity:</strong>
+    <%= @build.dexterity %>
+  </li>
+
+  <li>
+    <strong>Intelligence:</strong>
+    <%= @build.intelligence %>
+  </li>
+
+  <li>
+    <strong>Faith:</strong>
+    <%= @build.faith %>
+  </li>
+
+  <li>
+    <strong>Arcane:</strong>
+    <%= @build.arcane %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.build_path(@conn, :edit, @build) %></span> |
+<span><%= link "Back", to: Routes.build_path(@conn, :index) %></span>
