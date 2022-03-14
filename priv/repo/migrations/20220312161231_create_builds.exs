@@ -1,8 +1,8 @@
-defmodule EldenRingPlanner.Repo.Migrations.CreateBuild do
+defmodule EldenRingPlanner.Repo.Migrations.CreateBuilds do
   use Ecto.Migration
 
   def change do
-    create table(:build) do
+    create table(:builds) do
       add :name, :string
       add :level, :integer
       add :vigor, :integer

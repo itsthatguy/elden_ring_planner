@@ -1,8 +1,8 @@
-defmodule EldenRingPlanner.Repo.Migrations.CreateArchetype do
+defmodule EldenRingPlanner.Repo.Migrations.CreateArchetypes do
   use Ecto.Migration
 
   def change do
-    create table(:archetype) do
+    create table(:archetypes) do
       add :name, :string
 
       timestamps()

@@ -18,9 +18,8 @@ defmodule EldenRingPlannerWeb.Router do
     pipe_through(:browser)
 
     get("/", PageController, :index)
-    resources("/stats", StatController)
     resources("/archetypes", ArchetypeController)
-    resources("/builds", BuilsController)
+    resources("/builds", BuildController)
   end
 
   # Other scopes may use custom stacks.

@@ -2,7 +2,7 @@ defmodule EldenRingPlanner.Builds.Build do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "build" do
+  schema "builds" do
     field :arcane, :integer
     field :dexterity, :integer
     field :endurance, :integer
@@ -13,6 +13,7 @@ defmodule EldenRingPlanner.Builds.Build do
     field :name, :string
     field :strength, :integer
     field :vigor, :integer
+    belongs_to :archetype, EldenRingPlanner.Archetypes.Archetype
 
     timestamps()
   end
@@ -20,7 +21,29 @@ defmodule EldenRingPlanner.Builds.Build do
   @doc false
   def changeset(build, attrs) do
     build
-    |> cast(attrs, [:name, :level, :vigor, :mind, :endurance, :strength, :dexterity, :intelligence, :faith, :arcane])
-    |> validate_required([:name, :level, :vigor, :mind, :endurance, :strength, :dexterity, :intelligence, :faith, :arcane])
+    |> cast(attrs, [
+      :name,
+      :level,
+      :vigor,
+      :mind,
+      :endurance,
+      :strength,
+      :dexterity,
+      :intelligence,
+      :faith,
+      :arcane
+    ])
+    |> validate_required([
+      :name,
+      :level,
+      :vigor,
+      :mind,
+      :endurance,
+      :strength,
+      :dexterity,
+      :intelligence,
+      :faith,
+      :arcane
+    ])
   end
 end
